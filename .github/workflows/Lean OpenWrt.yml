@@ -17,8 +17,8 @@ on:
   #  types: started
 
 env:
-  REPO_URL: https://github.com/DHDAXCW/lede-rockchip
-  REPO_BRANCH: stable
+  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_BRANCH: master
   CONFIG_FILE: configs/lean/R4.config
   DIY_SH: scripts/lean.sh
   IPV6MOD_IN_FIRMWARE: true
@@ -66,7 +66,7 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
-        docker rmi $(docker images -q)
+        # docker rmi $(docker images -q)
         sudo -E apt -yqq update
         sudo -E apt -yqq full-upgrade
         sudo -E apt -yqq autoremove --purge
